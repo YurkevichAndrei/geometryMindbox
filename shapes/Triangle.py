@@ -22,4 +22,4 @@ class Triangle(Shape):
     def is_right_triangle(self):
         sides = [self.side_a, self.side_b, self.side_c]
         sides.sort()
-        return sides[2] ** 2 == sides[0] ** 2 + sides[1] ** 2
+        return round(sides[2] ** 2, 0) == round(sides[0] ** 2 + sides[1] ** 2, 0)

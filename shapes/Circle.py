@@ -1,6 +1,6 @@
 import math
 
-import Shape
+from Shape import Shape
 
 
 class Circle(Shape):

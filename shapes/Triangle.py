@@ -11,9 +11,9 @@ class Triangle(Shape):
 
     # метод расчета переметра
     def perimeter(self):
-        return (self.side_a + self.side_b + self.side_c) / 2
+        return self.side_a + self.side_b + self.side_c
 
     # метод расчета площади по формуле Герона (по трем сторонам)
     def area(self):
-        perimeter = self.perimeter()
-        return math.sqrt(perimeter * (perimeter - self.side_a) * (perimeter - self.side_b) * (perimeter - self.side_c))
+        poluperimeter = self.perimeter() / 2
+        return math.sqrt(poluperimeter * (poluperimeter - self.side_a) * (poluperimeter - self.side_b) * (poluperimeter - self.side_c))

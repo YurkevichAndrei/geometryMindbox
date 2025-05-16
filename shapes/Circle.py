@@ -1,6 +1,6 @@
 import math
 
-from Shape import Shape
+from shapes.Shape import Shape
 
 
 class Circle(Shape):
@@ -10,3 +10,6 @@ class Circle(Shape):
     # метод расчета площади
     def area(self):
         return math.pi * self.radius ** 2
+
+    def perimeter(self):
+        pass

@@ -1,6 +1,6 @@
 import math
 
-from Shape import Shape
+from shapes.Shape import Shape
 
 
 class Triangle(Shape):

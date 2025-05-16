@@ -24,6 +24,26 @@ class TestCircle(unittest.TestCase):
         expected_area = 32
         self.assertAlmostEqual(triangle.area(), expected_area, places=5)
 
+    def test_perimeter_5_5_5(self):
+        triangle = Triangle(5, 5, 5)
+        expected_perimeter = 15
+        self.assertAlmostEqual(triangle.perimeter(), expected_perimeter, places=5)
+
+    def test_perimeter_15_125_115(self):
+        triangle = Triangle(15, 125, 115)
+        expected_perimeter = 255
+        self.assertAlmostEqual(triangle.perimeter(), expected_perimeter, places=5)
+
+    def test_perimeter_135_1250_1250(self):
+        triangle = Triangle(135, 1250, 1250)
+        expected_perimeter = 2635
+        self.assertAlmostEqual(triangle.perimeter(), expected_perimeter, places=5)
+
+    def test_perimeter_8_8_11313708(self):
+        triangle = Triangle(8, 8, 11.313708)
+        expected_perimeter = 27.313708
+        self.assertAlmostEqual(triangle.perimeter(), expected_perimeter, places=5)
+
 
 if __name__ == '__main__':
     unittest.main()

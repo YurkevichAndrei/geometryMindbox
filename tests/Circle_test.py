@@ -1,20 +1,29 @@
 import unittest
 import math
-import random
 
 from shapes.Circle import Circle
 
 
-class TestCircle(unittest.TestCase):
-    def test_area(self):
-        for i in range(5):
-            print("\nTest Number: ", i+1)
-            r = random.randint(1, 1000)
-            print(r)
-            circle = Circle(radius=r)
-            expected_area = math.pi * r ** 2
-            self.assertAlmostEqual(circle.area(), expected_area, places=5)
+class MyTestCase(unittest.TestCase):
+    def test_area_5(self):
+        r = 5
+        circle = Circle(radius=r)
+        expected_area = 78.53982
+        self.assertAlmostEqual(circle.area(), expected_area, places=5)
+
+    def test_area_125(self):
+        r = 125
+        circle = Circle(radius=r)
+        expected_area = 49087.38521
+        self.assertAlmostEqual(circle.area(), expected_area, places=5)
+
+    def test_area_13_5(self):
+        r = 13.5
+        circle = Circle(radius=r)
+        expected_area = 572.55526
+        self.assertAlmostEqual(circle.area(), expected_area, places=5)
 
 
 if __name__ == '__main__':
     unittest.main()
+
